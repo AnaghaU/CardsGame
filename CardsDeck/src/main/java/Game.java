@@ -11,6 +11,7 @@ public class Game {
 			String numberOfPlayers = scanner.nextLine();
 			ShuffleCards shuffler = new ShuffleCards();
 			shuffler.shuffleCardsToPlayers(numberOfPlayers);
+			shuffler.printCardsPossesed();
 		}
 		catch (Exception e) {
 			e.printStackTrace();

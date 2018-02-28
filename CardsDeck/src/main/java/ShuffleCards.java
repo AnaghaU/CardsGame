@@ -8,11 +8,12 @@ import java.util.Random;
 
 public class ShuffleCards {
 
+	List<Player> playersList = new ArrayList<Player>();
+	
 	public int shuffleCardsToPlayers(String players) throws Exception {
 
 		Deck deck = new Deck();
-		Map<String, String> mapOfCards = new HashMap<>();
-		List<Player> playersList = new ArrayList<Player>();
+		Map<String, String> mapOfCards = new HashMap<>();		
 		Player player;
 		int cardsCheck = 0, playersCheck = 0;
 		List<String> cardsToPlayer;
@@ -45,11 +46,6 @@ public class ShuffleCards {
 					playersCheck++;
 					playersList.add(player);
 				}
-				for(int k = 0; k < playersList.size() ; k++){
-					System.out.print("Player : "+ (k+1)+" ");
-					System.out.println(playersList.get(k).getCards());
-				}
-				
 				System.out.println("Remaining number of cards = " + 52 % numberOfPlayers);
 			}
 		} catch (Exception e) {
@@ -57,5 +53,12 @@ public class ShuffleCards {
 			return -2;
 		}
 		return mapOfCards.size();
+	}
+	
+	public void printCardsPossesed(){
+		for(int k = 0; k < playersList.size() ; k++){
+			System.out.print("Player: "+ (k+1)+" ");
+			System.out.println(playersList.get(k).getCards());
+		}
 	}
 }

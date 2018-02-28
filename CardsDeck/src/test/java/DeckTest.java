@@ -33,6 +33,7 @@ public class DeckTest {
 			String[] csvData = line.split(","); 
 			testDataList.add(csvData[5]);
 		}
+		br.close();
 		
 	}
 	
