@@ -12,6 +12,7 @@ public class Game {
 			ShuffleCards shuffler = new ShuffleCards();
 			shuffler.shuffleCardsToPlayers(numberOfPlayers);
 			shuffler.printCardsPossesed();
+			scanner.close();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
